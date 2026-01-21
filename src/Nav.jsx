@@ -2,18 +2,17 @@ import React from 'react';
 
 function Nav() {
   return (
-    <nav className="p-4">
-      <ul className="grid grid-cols-6 gap-4 text-center text-black">
-        <li><a href="/" className="hover:text-yellow-400">Home</a></li>
-        <li><a href="/about" className="hover:text-yellow-400">About</a></li>
-        <li><a href="/menu" className="hover:text-yellow-400">Menu</a></li>
-        <li><a href="/reservations" className="hover:text-yellow-400">Reservations</a></li>
-        <li><a href="/order-online" className="hover:text-yellow-400">Order Online</a></li>
-        <li><a href="/login" className="hover:text-yellow-400">Login</a></li>
+    <nav>
+      <ul className="flex flex-wrap justify-center gap-4 md:gap-8 text-sm md:text-base text-gray-800 font-medium">
+        <li><a href="/" className="hover:text-[#495E57] transition-colors">Home</a></li>
+        <li><a href="/about" className="hover:text-[#495E57] transition-colors">About</a></li>
+        <li><a href="/menu" className="hover:text-[#495E57] transition-colors">Menu</a></li>
+        <li><a href="/reservations" className="hover:text-[#495E57] transition-colors">Reservations</a></li>
+        <li><a href="/order-online" className="hover:text-[#495E57] transition-colors">Order Online</a></li>
+        <li><a href="/login" className="hover:text-[#495E57] transition-colors">Login</a></li>
       </ul>
     </nav>
   );
 }
 
 export default Nav;
-
