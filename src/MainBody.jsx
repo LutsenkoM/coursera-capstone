@@ -2,28 +2,24 @@ import React, { useReducer } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import HomePage from './HomePage';
 import BookingPage from './BookingPage';
+import { fetchAPI } from './api';
 
-// Initialize available times
+// Initialize available times using the API
 function initializeTimes() {
-  return [
-    '17:00',
-    '18:00',
-    '19:00',
-    '20:00',
-    '21:00',
-    '22:00'
-  ];
+  // Create a date object for today
+  const today = new Date();
+  // Call the API function to get available times for today
+  return fetchAPI(today);
 }
 
 // Reducer function to update available times
 function updateTimes(state, action) {
-  // For now, return the same available times regardless of the date
-  // This will be enhanced later with actual date-based logic
   switch (action.type) {
     case 'UPDATE_TIMES':
-      // action.payload will contain the selected date
-      // For now, returning the same times
-      return state;
+      // action.payload contains the selected date string
+      // Convert it to a Date object and fetch available times from API
+      const selectedDate = new Date(action.payload);
+      return fetchAPI(selectedDate);
     default:
       return state;
   }
@@ -51,4 +47,3 @@ function MainBody() {
 }
 
 export default MainBody;
-
