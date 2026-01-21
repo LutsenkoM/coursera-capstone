@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from './assets/logo.png';
 
 function Footer() {
@@ -13,12 +14,12 @@ function Footer() {
           <div>
             <h3 className="text-base md:text-lg font-bold mb-4">Doormat Navigation</h3>
             <ul className="space-y-2 text-sm md:text-base">
-              <li><a href="/" className="hover:text-[#F4CE14] transition-colors">Home</a></li>
-              <li><a href="/about" className="hover:text-[#F4CE14] transition-colors">About</a></li>
-              <li><a href="/menu" className="hover:text-[#F4CE14] transition-colors">Menu</a></li>
-              <li><a href="/reservations" className="hover:text-[#F4CE14] transition-colors">Reservations</a></li>
-              <li><a href="/order-online" className="hover:text-[#F4CE14] transition-colors">Order Online</a></li>
-              <li><a href="/login" className="hover:text-[#F4CE14] transition-colors">Login</a></li>
+              <li><Link to="/" className="hover:text-[#F4CE14] transition-colors">Home</Link></li>
+              <li><Link to="/about" className="hover:text-[#F4CE14] transition-colors">About</Link></li>
+              <li><Link to="/menu" className="hover:text-[#F4CE14] transition-colors">Menu</Link></li>
+              <li><Link to="/reservations" className="hover:text-[#F4CE14] transition-colors">Reservations</Link></li>
+              <li><Link to="/order-online" className="hover:text-[#F4CE14] transition-colors">Order Online</Link></li>
+              <li><Link to="/login" className="hover:text-[#F4CE14] transition-colors">Login</Link></li>
             </ul>
           </div>
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Hero() {
   return (
@@ -12,9 +13,12 @@ function Hero() {
               We are a family owned Mediterranean restaurant, focused on traditional
               recipes served with a modern twist.
             </p>
-            <button className="bg-[#F4CE14] text-black font-bold py-3 px-6 rounded-lg hover:bg-[#E5BF04] transition-colors w-full sm:w-auto">
+            <Link
+              to="/reservations"
+              className="bg-[#F4CE14] text-black font-bold py-3 px-6 rounded-lg hover:bg-[#E5BF04] transition-colors w-full sm:w-auto inline-block text-center"
+            >
               Reserve a Table
-            </button>
+            </Link>
           </div>
           <div className="flex justify-center mt-6 md:mt-0">
             <div className="w-full max-w-xs md:w-64 h-64 md:h-80 bg-gray-300 rounded-lg overflow-hidden shadow-xl">
