@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 function ConfirmedBooking() {
   return (
-    <div className="max-w-2xl mx-auto px-4 py-16 text-center">
-      <div className="bg-white rounded-lg shadow-lg p-8">
-        <div className="mb-6">
+    <main className="max-w-2xl mx-auto px-4 py-16 text-center" aria-labelledby="confirmation-heading">
+      <article className="bg-white rounded-lg shadow-lg p-8">
+        <div className="mb-6" aria-hidden="true">
           <svg
             className="w-20 h-20 mx-auto text-green-500"
             fill="none"
@@ -21,7 +21,7 @@ function ConfirmedBooking() {
           </svg>
         </div>
 
-        <h1 className="text-3xl font-bold text-[#495E57] mb-4">
+        <h1 id="confirmation-heading" className="text-3xl font-bold text-[#495E57] mb-4">
           Booking Confirmed!
         </h1>
 
@@ -37,13 +37,13 @@ function ConfirmedBooking() {
         <Link
           to="/"
           className="inline-block bg-[#F4CE14] text-black font-bold py-3 px-8 rounded-lg hover:bg-[#E5BF04] transition-colors"
+          aria-label="Return to home page"
         >
           Return to Home
         </Link>
-      </div>
-    </div>
+      </article>
+    </main>
   );
 }
 
 export default ConfirmedBooking;
-

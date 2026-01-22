@@ -5,7 +5,7 @@ function BookingPage({ availableTimes, dispatch, submitForm }) {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-[#495E57] text-white py-12 px-4 md:px-6">
+      <section className="bg-[#495E57] text-white py-12 px-4 md:px-6" aria-label="Reservation page header">
         <div className="container mx-auto max-w-6xl text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-[#F4CE14] mb-4">
             Reserve a Table
@@ -18,7 +18,7 @@ function BookingPage({ availableTimes, dispatch, submitForm }) {
       </section>
 
       {/* Booking Form Section */}
-      <section className="py-12 px-4 md:px-6">
+      <section className="py-12 px-4 md:px-6" aria-label="Reservation form section">
         <div className="container mx-auto max-w-4xl">
           <div className="mb-8 text-center">
             <h2 className="text-3xl font-bold mb-4">Make a Reservation</h2>
@@ -29,16 +29,16 @@ function BookingPage({ availableTimes, dispatch, submitForm }) {
 
           <BookingForm availableTimes={availableTimes} dispatch={dispatch} submitForm={submitForm} />
 
-          <div className="mt-12 bg-white p-6 rounded-lg shadow-md">
+          <aside className="mt-12 bg-white p-6 rounded-lg shadow-md" aria-label="Reservation policies">
             <h3 className="text-2xl font-bold mb-4">Reservation Information</h3>
             <ul className="space-y-2 text-gray-700">
               <li>• Reservations are available from 5:00 PM to 10:00 PM</li>
               <li>• Maximum party size is 10 guests</li>
-              <li>• For larger parties, please call us at (312) 555-0100</li>
+              <li>• For larger parties, please call us at <a href="tel:+13125550100" className="text-[#495E57] hover:underline">(312) 555-0100</a></li>
               <li>• Reservations must be made at least 2 hours in advance</li>
               <li>• Please arrive within 15 minutes of your reservation time</li>
             </ul>
-          </div>
+          </aside>
         </div>
       </section>
     </div>

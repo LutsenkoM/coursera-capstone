@@ -2,7 +2,7 @@ import React from 'react';
 
 function About() {
   return (
-    <section className="py-8 md:py-12 px-4 md:px-6 bg-white">
+    <section className="py-8 md:py-12 px-4 md:px-6 bg-white" aria-label="About Little Lemon restaurant">
       <div className="container mx-auto max-w-6xl">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
@@ -18,34 +18,34 @@ function About() {
               recipes served with a modern twist.
             </p>
           </div>
-          <div className="relative h-64 md:h-96 hidden md:block">
+          <div className="relative h-64 md:h-96 hidden md:block" role="img" aria-label="Restaurant images showcase">
             <div className="absolute w-48 md:w-64 h-56 md:h-80 rounded-lg overflow-hidden shadow-lg">
               <img
                 src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&h=500&fit=crop"
-                alt="Restaurant interior"
+                alt="Modern and welcoming restaurant interior at Little Lemon"
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="absolute w-48 md:w-64 h-56 md:h-80 rounded-lg overflow-hidden shadow-lg top-8 md:top-12 left-24 md:left-32">
               <img
                 src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=500&fit=crop"
-                alt="Chefs cooking"
+                alt="Professional chefs preparing Mediterranean dishes in our kitchen"
                 className="w-full h-full object-cover"
               />
             </div>
           </div>
-          <div className="md:hidden flex justify-center gap-4">
+          <div className="md:hidden flex justify-center gap-4" role="img" aria-label="Restaurant images showcase">
             <div className="w-40 h-52 rounded-lg overflow-hidden shadow-lg">
               <img
                 src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&h=500&fit=crop"
-                alt="Restaurant interior"
+                alt="Modern and welcoming restaurant interior at Little Lemon"
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="w-40 h-52 rounded-lg overflow-hidden shadow-lg">
               <img
                 src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=500&fit=crop"
-                alt="Chefs cooking"
+                alt="Professional chefs preparing Mediterranean dishes in our kitchen"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -57,4 +57,3 @@ function About() {
 }
 
 export default About;
-
