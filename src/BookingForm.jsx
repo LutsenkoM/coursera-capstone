@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function BookingForm({ availableTimes, dispatch }) {
+function BookingForm({ availableTimes, dispatch, submitForm }) {
   const [date, setDate] = useState('');
   const [time, setTime] = useState('17:00');
   const [guests, setGuests] = useState(1);
@@ -21,9 +21,8 @@ function BookingForm({ availableTimes, dispatch }) {
       guests,
       occasion
     };
-    console.log('Booking submitted:', formData);
-    // TODO: API call will be added here in the future
-    alert(`Reservation submitted for ${guests} guest(s) on ${date} at ${time} for ${occasion}`);
+    // Call the submitForm function passed from MainBody
+    submitForm(formData);
   };
 
   return (

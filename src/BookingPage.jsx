@@ -1,7 +1,7 @@
 import React from 'react';
 import BookingForm from './BookingForm';
 
-function BookingPage({ availableTimes, dispatch }) {
+function BookingPage({ availableTimes, dispatch, submitForm }) {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -27,7 +27,7 @@ function BookingPage({ availableTimes, dispatch }) {
             </p>
           </div>
 
-          <BookingForm availableTimes={availableTimes} dispatch={dispatch} />
+          <BookingForm availableTimes={availableTimes} dispatch={dispatch} submitForm={submitForm} />
 
           <div className="mt-12 bg-white p-6 rounded-lg shadow-md">
             <h3 className="text-2xl font-bold mb-4">Reservation Information</h3>
