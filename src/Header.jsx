@@ -1,8 +1,14 @@
 import React from 'react';
+import {useContext} from 'react';
 import Nav from "./Nav.jsx";
 import logo from './assets/logo.png';
+import testContext from "./context/testContext.js";
 
 function Header() {
+    const {} = useContext(testContext);
+
+    console.log('Header context value:', cntx); // Log the context value to verify it's being accessed)
+
   return (
     <header className="bg-white shadow-sm py-3 px-4 md:py-4 md:px-6 sticky top-0 z-50" role="banner">
       <div className="container mx-auto max-w-6xl flex flex-col sm:flex-row justify-between items-center gap-4">
